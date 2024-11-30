@@ -59,7 +59,6 @@ Please refer to [GETTING_STARGTED.md](docs/GETTING_STARTED.md) to learn how to p
 1.  Training
     ```
     export CUDA_VISIBLE_DEVICES=0
-
 ```
 # # ReferItGame
 python -m torch.distributed.launch --nproc_per_node=1 --use_env train.py --batch_size 24 --lr_bert 0.00001 --aug_crop --aug_scale --aug_translate --backbone resnet50 --bert_enc_num 12 --detr_enc_num 6 --dataset referit --max_query_len 20 --output_dir outputs/referit_r50
