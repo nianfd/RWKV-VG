@@ -7,7 +7,7 @@ This is the official implementation of [**RWKV-VG: Visual Grounding with RWKV-dr
 
 Please refer to [GETTING_STARGTED.md](docs/GETTING_STARTED.md) to learn how to prepare the datasets and pretrained checkpoints.
 
-### Model Zoo
+### Results
 
 <table border="2">
     <thead>
@@ -87,8 +87,26 @@ python -m torch.distributed.launch --nproc_per_node=1 --use_env train.py --batch
 
 2.  Evaluation
     ```
-    CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -m torch.distributed.launch --nproc_per_node=8 --use_env eval.py --batch_size 32 --num_workers 4 --bert_enc_num 12 --detr_enc_num 6 --backbone resnet50 --dataset referit --max_query_len 20 --eval_set test --eval_model ./outputs/referit_r50/best_checkpoint.pth --output_dir ./outputs/referit_r50
-    ```
-
+    export CUDA_VISIBLE_DEVICES=0
+```
+# ReferItGame
+python -m torch.distributed.launch --nproc_per_node=1 --use_env eval.py --batch_size 32 --num_workers 4 --bert_enc_num 12 --detr_enc_num 6 --backbone resnet50 --dataset referit --max_query_len 20 --eval_set test --eval_model ./released_models/TransVG_referitV3-startHead.pth --output_dir ./outputs/referit_r50
+```
+```
+# # RefCOCO
+python -m torch.distributed.launch --nproc_per_node=1 --use_env eval.py --batch_size 32 --num_workers 4 --bert_enc_num 12 --detr_enc_num 6 --backbone resnet50 --dataset unc --max_query_len 20 --eval_set testB --eval_model ./released_models/RWKV_UNC.pth --output_dir ./outputs/refcoco_r50
+```
+```
+# # RefCOCO+
+python -m torch.distributed.launch --nproc_per_node=1 --use_env eval.py --batch_size 32 --num_workers 4 --bert_enc_num 12 --detr_enc_num 6 --backbone resnet50 --dataset unc+ --max_query_len 20 --eval_set testB --eval_model ./released_models/RWKV_UNC_PLUS.pth --output_dir ./outputs/refcoco_plus_r50
+```
+```
+# # RefCOCOg g-split
+python -m torch.distributed.launch --nproc_per_node=1 --use_env eval.py --batch_size 32 --num_workers 4 --bert_enc_num 12 --detr_enc_num 6 --backbone resnet50 --dataset gref --max_query_len 40 --eval_set val --eval_model ./released_models/TransVG_gref.pth --output_dir ./outputs/refcocog_gsplit_r50
+```
+```
+# # RefCOCOg u-split
+python -m torch.distributed.launch --nproc_per_node=1 --use_env eval.py --batch_size 32 --num_workers 4 --bert_enc_num 12 --detr_enc_num 6 --backbone resnet50 --dataset gref_umd --max_query_len 40 --eval_set test --eval_model ./released_models/RWKV-usplit.pth --output_dir ./outputs/refcocog_usplit_r50
+```
 ### Acknowledge
 This codebase is partially based on [TransVG](https://github.com/djiajunustc/TransVG) and [RWKV-CLIP](https://github.com/deepglint/RWKV-CLIP).
