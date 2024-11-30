@@ -1,5 +1,5 @@
 # TransVG
-<p align="center"> <img src='docs/framework.jpg' align="center" height="540px"> </p>
+<p align="center"> <img src='docs/framework.png' align="center" height="540px"> </p>
 
 This is the official implementation of [**RWKV-VG: Visual Grounding with RWKV-driven Encoder-Decoder Framework**]. 
 
