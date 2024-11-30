@@ -37,18 +37,18 @@ Please refer to [GETTING_STARGTED.md](docs/GETTING_STARTED.md) to learn how to p
     </tbody>
     <tbody>
     <tr>
-            <td> R-50 </td>
-            <td>80.5</td>
-            <td>83.2</td>
-            <td>75.2</td>
-            <td>66.4</td>
-            <td>70.5</td>
-            <td>57.7</td>
-            <td>66.4</td>
-            <td>67.9</td>
-            <td>67.4</td>
-            <td>71.6</td>
-            <td>69.3</td>
+            <td> RWKV-VG </td>
+            <td>82.45</td>
+            <td>85.13</td>
+            <td>77.41</td>
+            <td>66.20</td>
+            <td>72.60</td>
+            <td>57.25</td>
+            <td>68.71</td>
+            <td>69.08</td>
+            <td>69.85</td>
+            <td>73.21</td>
+            <td>70.95</td>
         </tr>
     </tbody>
 </table>
