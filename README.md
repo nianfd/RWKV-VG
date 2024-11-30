@@ -65,7 +65,8 @@ python -m torch.distributed.launch --nproc_per_node=1 --use_env train.py --batch
 ```
 ```
 # # RefCOCO
-python -m torch.distributed.launch --nproc_per_node=1 --use_env train.py --batch_size 24 --lr_bert 0.00001 --aug_crop --aug_scale --aug_translate  --dataset unc --max_query_len 20 --output_dir outputs/refcoco 
+python -m torch.distributed.launch --nproc_per_node=1 --use_env train.py --batch_size 24 --lr_bert 0.00001 --aug_crop --aug_scale --aug_translate  --dataset unc --max_query_len 20 --output_dir outputs/refcoco
+
 ```
 ```
 # # RefCOCO+
