@@ -88,7 +88,7 @@ python -m torch.distributed.launch --nproc_per_node=1 --use_env train.py --batch
     ```
     export CUDA_VISIBLE_DEVICES=0
 ```
-# ReferItGame
+# # ReferItGame
 python -m torch.distributed.launch --nproc_per_node=1 --use_env eval.py --batch_size 32 --num_workers 4  --dataset referit --max_query_len 20 --eval_set test --eval_model ./released_models/TransVG_referitV3-startHead.pth --output_dir ./outputs/referit
 ```
 ```
