@@ -41,9 +41,9 @@ Please refer to [GETTING_STARGTED.md](docs/GETTING_STARTED.md) to learn how to p
             <td>82.45</td>
             <td>85.13</td>
             <td>77.41</td>
-            <td>66.20</td>
-            <td>72.60</td>
-            <td>57.25</td>
+            <td>67.95</td>
+            <td>73.52</td>
+            <td>57.17</td>
             <td>68.71</td>
             <td>69.08</td>
             <td>69.85</td>
